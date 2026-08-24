@@ -1,0 +1,114 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
+export const Reservations: React.FC = () => {
+  const { ref, isVisible } = useScrollReveal();
+
+  const floatingVariant1 = {
+    hidden: { opacity: 0, x: -60, y: -40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const floatingVariant2 = {
+    hidden: { opacity: 0, x: 60, y: 40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+        delay: 0.1,
+      },
+    },
+  };
+
+  const centerVariant = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  return (
+    <section id="reservations" ref={ref} className="py-20 px-4 relative min-h-screen flex items-center">
+      {/* Floating Left Image */}
+      <motion.div
+        variants={floatingVariant1}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        className="hidden lg:block absolute left-12 top-20 w-48 h-48"
+      >
+        <img
+          src="/marea-gemini/fotos/vistas-increibles.jpg"
+          alt="Vistas Increíbles"
+          className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
+        />
+        <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
+          Vistas Increíbles
+        </p>
+      </motion.div>
+
+      {/* Center Content */}
+      <motion.div
+        variants={centerVariant}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        className="max-w-2xl mx-auto text-center z-10 relative"
+      >
+        <h2 className="text-5xl md:text-6xl font-bold text-text-day dark:text-text-night mb-8">
+          ¿Te vienes?
+        </h2>
+
+        <div className="mb-8">
+          <p className="text-lg md:text-xl text-text-day-light dark:text-text-night mb-2">
+            📍 Ría de Huelva, España
+          </p>
+          <p className="text-base md:text-lg text-text-day-light dark:text-text-night">
+            Disfruta de los mejores cócteles al atardecer en la mejor ubicación
+          </p>
+        </div>
+
+        <button className="btn-primary text-lg md:text-xl mb-8 specular-btn">
+          <span className="relative z-10">Reserva Ahora</span>
+          <div className="specular-light" />
+        </button>
+
+        <p className="text-sm md:text-base text-text-day-light dark:text-text-night italic">
+          Abierto de martes a domingo • 18:00 - 02:00
+        </p>
+      </motion.div>
+
+      {/* Floating Right Image */}
+      <motion.div
+        variants={floatingVariant2}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        className="hidden lg:block absolute right-12 bottom-20 w-48 h-48"
+      >
+        <img
+          src="/marea-gemini/fotos/ambiente-unico.jpg"
+          alt="Ambiente Único"
+          className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
+        />
+        <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
+          Ambiente Único
+        </p>
+      </motion.div>
+    </section>
+  );
+};

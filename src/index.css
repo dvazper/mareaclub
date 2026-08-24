@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light Mode (default) */
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gradient-to-b from-sky-day to-sky-day-accent text-text-day transition-colors duration-500;
+}
+
+body.dark {
+  @apply bg-gradient-to-b from-bg-night to-bg-night-dark text-text-night;
+  color-scheme: dark;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-5xl md:text-6xl font-black tracking-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+  animation: scrollReveal 0.8s ease-out forwards;
+}
+
+@keyframes scrollReveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Blur Reveal Animation */
+.blur-reveal {
+  opacity: 0;
+  filter: blur(12px);
+  animation: blurReveal 0.8s ease-out forwards;
+}
+
+@keyframes blurReveal {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Primary Button */
+.btn-primary {
+  @apply px-8 py-3 bg-text-day text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg active:scale-95;
+}
+
+body.dark .btn-primary {
+  @apply bg-text-night text-bg-night;
+}
+
+.btn-primary:hover {
+  @apply -translate-y-1;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply px-8 py-3 border-2 border-text-day text-text-day font-semibold rounded-lg transition-all duration-300 hover:bg-text-day hover:text-white;
+}
+
+body.dark .btn-secondary {
+  @apply border-text-night text-text-night hover:bg-text-night hover:text-bg-night;
+}
+
+/* Specular Button Effect Container */
+.specular-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.specular-light {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.specular-btn:hover .specular-light {
+  opacity: 1;
+}
+
+/* Smooth transitions */
+.transition-theme {
+  @apply transition-colors duration-500;
+}
+
