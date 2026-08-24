@@ -1,5 +1,5 @@
 export const images = {
-  hero: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88',
+  hero: '/public/marea-gemini/fotos/atardecer.jpg',
   cocktails: [
     'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=85',
     'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=1000&q=85',
