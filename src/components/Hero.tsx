@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { SpecularButton } from './SpecularButton';
+import { images } from '../data/images';
 
 export const Hero: React.FC = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -34,47 +35,47 @@ export const Hero: React.FC = () => {
     <section
       id="hero"
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative"
+      className="relative isolate flex min-h-[92svh] items-end overflow-hidden px-6 pb-16 pt-32 text-white md:min-h-screen md:px-12 md:pb-24 lg:px-20"
     >
+      <img
+        src={images.hero}
+        alt="Vistas de la costa al atardecer"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,22,29,.78)_0%,rgba(8,22,29,.34)_52%,rgba(8,22,29,.12)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(8,22,29,.72)_0%,transparent_55%)]" />
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={isVisible ? 'visible' : 'hidden'}
-        className="text-center max-w-4xl"
+        className="max-w-4xl text-left"
       >
-        {/* Logo */}
-        <motion.div variants={itemVariants} className="mb-12">
-          <img
-            src="/marea-gemini/fotos/logo.jpg"
-            alt="Marea Club Logo"
-            className="w-32 h-32 md:w-48 md:h-48 mx-auto object-cover rounded-lg shadow-lg blur-reveal"
-          />
-        </motion.div>
+        <motion.p variants={itemVariants} className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
+          Marea Club · Ría de Huelva
+        </motion.p>
 
-        {/* Main Title */}
-        <motion.div variants={itemVariants} className="mb-4">
-          <h1 className="text-5xl md:text-7xl font-black text-text-day dark:text-text-night mb-2">
-            El Verano
+        <motion.div variants={itemVariants} className="mb-5">
+          <h1 className="max-w-3xl text-6xl font-black leading-[.9] tracking-[-0.04em] md:text-8xl">
+            El verano
           </h1>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mb-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-text-day dark:text-text-night">
-            Que Te Llama
+          <h2 className="font-display max-w-2xl text-5xl font-light italic leading-none md:text-7xl">
+            que te llama
           </h2>
         </motion.div>
 
-        {/* Subtitle */}
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-text-day-light dark:text-text-night mb-10 italic"
+          className="mb-10 max-w-md text-base leading-relaxed text-white/80 md:text-lg"
         >
-          Cócteles & Atardeceres
+          Cócteles fríos, música lenta y la última luz del día sobre la ría.
         </motion.p>
 
-        {/* CTA Button */}
         <motion.div variants={itemVariants}>
-          <SpecularButton>Reserva tu Mesa</SpecularButton>
+          <SpecularButton className="btn-primary border border-white/20 bg-white text-text-day hover:bg-white/90">Reserva tu mesa</SpecularButton>
         </motion.div>
       </motion.div>
 
@@ -85,7 +86,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 2, repeat: Infinity }}
       >
         <svg
-          className="w-6 h-6 text-text-day dark:text-text-night"
+          className="h-6 w-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

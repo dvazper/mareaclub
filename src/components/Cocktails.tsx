@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { images } from '../data/images';
 
 interface Cocktail {
   id: number;
@@ -15,19 +16,19 @@ const cocktails: Cocktail[] = [
     id: 1,
     name: 'Piña Colada',
     description: 'Combinación tropical de ron, crema de coco y jugo de piña con un toque caribeño',
-    image: '/marea-gemini/fotos/pina-colada.jpg',
+    image: images.cocktails[0],
   },
   {
     id: 2,
     name: 'Margarita',
     description: 'Clásico mexicano con tequila, triple sec y jugo de limón fresco',
-    image: '/marea-gemini/fotos/margarita.jpg',
+    image: images.cocktails[1],
   },
   {
     id: 3,
     name: 'Atardecer Marea',
     description: 'Nuestro cóctel insignia: vodka, jugo de arándano y un toque de misterio',
-    image: '/marea-gemini/fotos/atardecer-marea.jpg',
+    image: images.cocktails[2],
   },
 ];
 

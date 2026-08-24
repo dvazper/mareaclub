@@ -2,27 +2,14 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useTheme } from '../context/ThemeContext';
+import { images } from '../data/images';
 
 export const Gallery: React.FC = () => {
   const { ref, isVisible } = useScrollReveal();
   const { isDark } = useTheme();
 
   const galleryImages = useMemo(() => {
-    const dayImages = [
-      '/marea-gemini/fotos/galeria-dia-1.jpg',
-      '/marea-gemini/fotos/galeria-dia-2.jpg',
-      '/marea-gemini/fotos/galeria-dia-3.jpg',
-      '/marea-gemini/fotos/galeria-dia-4.jpg',
-    ];
-
-    const nightImages = [
-      '/marea-gemini/fotos/galeria-noche-1.jpg',
-      '/marea-gemini/fotos/galeria-noche-2.jpg',
-      '/marea-gemini/fotos/galeria-noche-3.jpg',
-      '/marea-gemini/fotos/galeria-noche-4.jpg',
-    ];
-
-    return isDark ? nightImages : dayImages;
+    return isDark ? images.nightGallery : images.dayGallery;
   }, [isDark]);
 
   const imageVariants = {

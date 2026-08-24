@@ -14,10 +14,10 @@ export const Navigation: React.FC = () => {
   return (
     <>
       {/* Mobile Menu Button */}
-      <div className="fixed top-6 left-6 z-50 md:hidden">
+      <div className="fixed left-5 top-5 z-50 md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 rounded-lg bg-text-day text-white dark:bg-text-night dark:text-bg-night transition-all duration-300"
+          className="rounded-full bg-white/90 p-3 text-text-day shadow-lg backdrop-blur transition-all duration-300"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -34,7 +34,7 @@ export const Navigation: React.FC = () => {
 
       {/* Menu */}
       <nav
-        className={`fixed left-0 top-0 h-screen w-64 bg-bg-night dark:bg-bg-night-dark shadow-2xl z-40 flex flex-col justify-center items-center transition-transform duration-300 md:static md:h-auto md:w-auto md:bg-transparent md:shadow-none md:flex-row md:gap-8 md:justify-center md:py-6 ${
+        className={`fixed left-0 top-0 z-40 flex h-screen w-72 flex-col items-center justify-center bg-[#12282a] shadow-2xl transition-transform duration-300 md:left-1/2 md:top-5 md:h-auto md:w-auto md:-translate-x-1/2 md:flex-row md:gap-8 md:rounded-full md:bg-black/25 md:px-7 md:py-3 md:shadow-none md:backdrop-blur-md ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
           <a
             key={item.label}
             href={item.href}
-            className="text-white text-lg font-semibold hover:text-sky-day-accent transition-colors duration-300 py-4 md:py-0"
+            className="py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:text-[#e9bf86] md:py-0"
             onClick={() => setIsOpen(false)}
           >
             {item.label}

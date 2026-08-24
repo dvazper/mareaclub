@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,22 +20,24 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-gradient-to-b from-sky-day to-sky-day-accent text-text-day transition-colors duration-500;
+  @apply bg-[#f3efe8] text-[#173437] transition-colors duration-500;
 }
 
 body.dark {
-  @apply bg-gradient-to-b from-bg-night to-bg-night-dark text-text-night;
+  @apply bg-[#0d2021] text-text-night;
   color-scheme: dark;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
 }
 
 h1 {
@@ -88,7 +92,7 @@ h3 {
 
 /* Primary Button */
 .btn-primary {
-  @apply px-8 py-3 bg-text-day text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg active:scale-95;
+  @apply rounded-full px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg active:scale-95;
 }
 
 body.dark .btn-primary {
@@ -101,7 +105,7 @@ body.dark .btn-primary {
 
 /* Secondary Button */
 .btn-secondary {
-  @apply px-8 py-3 border-2 border-text-day text-text-day font-semibold rounded-lg transition-all duration-300 hover:bg-text-day hover:text-white;
+  @apply rounded-full border border-text-day px-8 py-3 font-semibold text-text-day transition-all duration-300 hover:bg-text-day hover:text-white;
 }
 
 body.dark .btn-secondary {
