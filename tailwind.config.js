@@ -15,38 +15,9 @@ export default {
         'bg-night-dark': '#020617',
         'text-night': '#f8fafc',
       },
-      animation: {
-        'scroll-reveal': 'scrollReveal 0.8s ease-out forwards',
-        'blur-reveal': 'blurReveal 0.8s ease-out forwards',
-      },
-      keyframes: {
-        scrollReveal: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(40px)',
-            clipPath: 'inset(0 0 100% 0)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-            clipPath: 'inset(0 0 0 0)',
-          },
-        },
-        blurReveal: {
-          '0%': {
-            opacity: '0',
-            filter: 'blur(12px)',
-            transform: 'translateY(30px)',
-          },
-          '100%': {
-            opacity: '1',
-            filter: 'blur(0px)',
-            transform: 'translateY(0)',
-          },
-        },
-      },
     },
   },
   darkMode: 'class',
   plugins: [],
 }
+

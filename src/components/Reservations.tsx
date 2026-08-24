@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { SpecularButton } from './SpecularButton';
 
 export const Reservations: React.FC = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -13,10 +14,10 @@ export const Reservations: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  };
+  } as any;
 
   const floatingVariant2 = {
     hidden: { opacity: 0, x: 60, y: 40 },
@@ -26,11 +27,11 @@ export const Reservations: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
         delay: 0.1,
       },
     },
-  };
+  } as any;
 
   const centerVariant = {
     hidden: { opacity: 0, scale: 0.95 },
@@ -39,10 +40,10 @@ export const Reservations: React.FC = () => {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  };
+  } as any;
 
   return (
     <section id="reservations" ref={ref} className="py-20 px-4 relative min-h-screen flex items-center">
@@ -83,12 +84,9 @@ export const Reservations: React.FC = () => {
           </p>
         </div>
 
-        <button className="btn-primary text-lg md:text-xl mb-8 specular-btn">
-          <span className="relative z-10">Reserva Ahora</span>
-          <div className="specular-light" />
-        </button>
+        <SpecularButton>Reserva Ahora</SpecularButton>
 
-        <p className="text-sm md:text-base text-text-day-light dark:text-text-night italic">
+        <p className="text-sm md:text-base text-text-day-light dark:text-text-night italic mt-8">
           Abierto de martes a domingo • 18:00 - 02:00
         </p>
       </motion.div>

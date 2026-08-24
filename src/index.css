@@ -108,29 +108,9 @@ body.dark .btn-secondary {
   @apply border-text-night text-text-night hover:bg-text-night hover:text-bg-night;
 }
 
-/* Specular Button Effect Container */
-.specular-btn {
-  position: relative;
-  overflow: hidden;
-}
-
-.specular-light {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.specular-btn:hover .specular-light {
-  opacity: 1;
-}
-
 /* Smooth transitions */
 .transition-theme {
   @apply transition-colors duration-500;
 }
+
 

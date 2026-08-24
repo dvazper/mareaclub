@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { SpecularButton } from './SpecularButton';
 
 export const Hero: React.FC = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -14,7 +15,7 @@ export const Hero: React.FC = () => {
         delayChildren: 0.1,
       },
     },
-  };
+  } as any;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40, clipPath: 'inset(0 0 100% 0)' },
@@ -24,16 +25,16 @@ export const Hero: React.FC = () => {
       clipPath: 'inset(0 0 0 0)',
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  };
+  } as any;
 
   return (
     <section
       id="hero"
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-20"
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative"
     >
       <motion.div
         variants={containerVariants}
@@ -73,10 +74,7 @@ export const Hero: React.FC = () => {
 
         {/* CTA Button */}
         <motion.div variants={itemVariants}>
-          <button className="btn-primary specular-btn text-lg md:text-xl">
-            <span className="relative z-10">Reserva tu Mesa</span>
-            <div className="specular-light" />
-          </button>
+          <SpecularButton>Reserva tu Mesa</SpecularButton>
         </motion.div>
       </motion.div>
 

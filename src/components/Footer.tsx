@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
             width="100%"
             height="200"
             style={{ border: 0, borderRadius: '0.5rem' }}
-            allowFullScreen=""
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

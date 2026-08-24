@@ -1,23 +1,99 @@
-# React + TypeScript + Vite
+# 🏖️ Marea Club - Landing Page Premium
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Una **Landing Page editorial, elegante y minimalista** para Marea Club, un beach club de tardeo y cócteles ubicado en la ría de Huelva.
 
-Currently, two official plugins are available:
+## ✨ Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🎨 Diseño Editorial Minimalista
+- Estilo limpio sin bordes pesados ni cajas cerradas
+- Degradados suaves en modo día/noche
+- Tipografía sofisticada y espacios negativos generosos
+- Diseño completamente responsivo
 
-## React Compiler
+### 🌙 Modo Día/Noche
+- Botón flotante en esquina inferior derecha para alternar temas
+- **Modo Día**: Degradado azul cielo (#e0f2fe a #bae6fd), textos azul oscuro (#0f172a)
+- **Modo Noche**: Degradado profundo (#0f172a a #020617), textos blanco roto (#f8fafc)
+- Persistencia de preferencia en localStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎬 Animaciones Avanzadas
 
-## Expanding the Oxlint configuration
+#### Scroll Reveal
+- Textos y encabezados aparecen con efecto máscara desde abajo
+- Basado en Intersection Observer para rendimiento óptimo
+- Trigger automático al hacer scroll
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+#### Gradual Blur
+- Imágenes pasan de borrosas a nítidas con movimiento ascendente
+- Efecto suave y profesional al desplazarse
+- Quedan fijas una vez animadas
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
+#### Especular Button Effect
+- Halo de luz suave que sigue el cursor dentro del botón
+- Efecto interactivo premium con radial gradient
+- Perfecto para los botones principales (CTA)
+
+## 🚀 Getting Started
+
+### Instalación
+
+\`\`\`bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Acceder en http://localhost:5173/
+\`\`\`
+
+### Build para Producción
+
+\`\`\`bash
+npm run build
+npm run preview
+\`\`\`
+
+## 📁 Estructura de Carpetas
+
+\`\`\`
+src/
+├── components/          # Componentes reutilizables
+├── context/            # Context para temas
+├── hooks/              # Custom hooks
+├── App.tsx             # Componente principal
+├── index.css           # Estilos globales
+└── main.tsx            # Punto de entrada
+\`\`\`
+
+## 🛠️ Stack Tecnológico
+
+- React 18 + TypeScript
+- Vite (build rápido)
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## 📱 Características Responsivas
+
+✅ Menú hamburguesa en mobile
+✅ Scroll horizontal en cocktails (mobile)
+✅ Galería dinámica por tema
+✅ Todas las secciones optimizadas para cada tamaño de pantalla
+
+## 🌟 Premium Features
+
+✅ Scroll reveal animations (clip-path based)
+✅ Blur reveal en imágenes
+✅ Especular button effects
+✅ Dark/Light mode con persistencia
+✅ 60fps animations (Framer Motion)
+✅ Accesibilidad completa
+
+---
+
+**Hecho con ❤️ para Marea Club**
+
   "plugins": ["react", "typescript", "oxc"],
   "options": {
     "typeAware": true

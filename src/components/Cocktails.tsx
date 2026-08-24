@@ -72,11 +72,11 @@ export const Cocktails: React.FC = () => {
       clipPath: 'inset(0 0 0 0)',
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
         delay: i * 0.1,
       },
     }),
-  };
+  } as any;
 
   return (
     <section id="cocktails" ref={ref} className="py-20 px-4 relative">
