@@ -7,11 +7,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         {/* Column 1: Logo & Description */}
         <div>
-          <img
-            src="/marea-gemini/fotos/logo.jpg"
-            alt="Marea Club"
-            className="w-20 h-20 rounded-lg mb-4 object-cover"
-          />
+          <div className="mb-4 text-2xl font-semibold tracking-[0.18em]">MAREA</div>
           <h3 className="text-xl font-bold mb-3">Marea Club</h3>
           <p className="text-text-night text-opacity-70 text-sm leading-relaxed">
             El mejor beach club de la ría de Huelva. Cócteles premium, vistas espectaculares y ambiente único para tus tardes de verano.
@@ -74,13 +70,13 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="text-lg font-bold mb-4">Ubicación</h4>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.6851485835607!2d-6.9597!3d37.2548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd120c5e8e5e5e5%3A0x0!2sHuelva!5e0!3m2!1ses!2ses!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396.9608108126055!2d-6.9601014031882125!3d37.25514528590572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11d11919d9eab1%3A0xe506b668cad53b93!2sMarea%20Club!5e0!3m2!1ses!2sus!4v1787609197902!5m2!1ses!2sus"
             width="100%"
             height="200"
             style={{ border: 0, borderRadius: '0.5rem' }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
           ></iframe>
         </div>
       </div>
