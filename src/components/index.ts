@@ -1,6 +1,9 @@
 export { Navigation } from './Navigation';
 export { Hero } from './Hero';
+export { Marquee } from './Marquee';
+export { About } from './About';
 export { Cocktails } from './Cocktails';
+export { BrandStatement } from './BrandStatement';
 export { Reservations } from './Reservations';
 export { Gallery } from './Gallery';
 export { Reviews } from './Reviews';

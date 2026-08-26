@@ -57,14 +57,13 @@ export const Hero: React.FC = () => {
 
         <motion.div variants={itemVariants} className="mb-5">
           <h1 className="max-w-3xl text-6xl font-black leading-[.9] tracking-[-0.04em] md:text-8xl">
-            El verano
+            Stay in
           </h1>
         </motion.div>
 
         <motion.div variants={itemVariants} className="mb-6">
           <h2 className="font-display max-w-2xl text-5xl font-light italic leading-none md:text-7xl">
-            que te llama
-          </h2>
+            marea</h2>
         </motion.div>
 
         <motion.p

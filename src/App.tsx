@@ -1,7 +1,10 @@
 import {
   Navigation,
   Hero,
+  Marquee,
+  About,
   Cocktails,
+  BrandStatement,
   Reservations,
   Gallery,
   Reviews,
@@ -24,10 +27,27 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen transition-colors duration-500">
-        <Navigation />
-        {showMenu ? <Menu /> : <><Hero /><Cocktails /><Reservations /><Gallery /><Reviews /><Footer /></>}
-        <ThemeToggle />
+      <div className="relative min-h-screen transition-colors duration-500">
+        <div className="grain-overlay pointer-events-none fixed inset-0 z-0 opacity-[0.05] mix-blend-overlay" />
+        <div className="relative z-[1]">
+          <Navigation />
+          {showMenu ? (
+            <Menu />
+          ) : (
+            <>
+              <Hero />
+              <Marquee />
+              <About />
+              <Cocktails />
+              <BrandStatement />
+              <Reservations />
+              <Gallery />
+              <Reviews />
+              <Footer />
+            </>
+          )}
+          <ThemeToggle />
+        </div>
       </div>
     </ThemeProvider>
   );

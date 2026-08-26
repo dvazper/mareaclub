@@ -26,6 +26,14 @@ export const Gallery: React.FC = () => {
     }),
   } as any;
 
+  const tileSpan = [
+    'lg:col-span-2 lg:row-span-2',
+    'row-span-1',
+    'row-span-1',
+    'lg:row-span-2',
+    'row-span-1',
+  ];
+
   return (
     <section id="gallery" ref={ref} className="py-20 px-4">
       <motion.div
@@ -39,8 +47,8 @@ export const Gallery: React.FC = () => {
         </h2>
       </motion.div>
 
-      {/* Gallery Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      {/* Gallery Mosaic */}
+      <div className="mx-auto grid max-w-6xl grid-cols-2 lg:grid-cols-4 auto-rows-[160px] sm:auto-rows-[200px] lg:auto-rows-[220px] gap-4">
         {galleryImages.map((image, i) => (
           <motion.div
             key={`${isDark}-${i}`}
@@ -48,12 +56,12 @@ export const Gallery: React.FC = () => {
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
             custom={i}
-            className="overflow-hidden rounded-lg shadow-lg h-64 md:h-80"
+            className={`group overflow-hidden rounded-2xl shadow-lg ${tileSpan[i] ?? ''}`}
           >
             <img
               src={image}
               alt={`Vista ${i + 1}`}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </motion.div>
         ))}

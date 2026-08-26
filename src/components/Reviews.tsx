@@ -49,7 +49,7 @@ const reviews: Review[] = [
   },
   {
     id: 6,
-    author: 'Pedro Sánchez',
+    author: 'Rubén Gómez',
     text: 'Definitivamente mi lugar favorito para pasar un atardecer. La combinación de vistas, comida y cócteles es simplemente perfecta.',
     date: 'Hace 10 días',
     rating: 5,

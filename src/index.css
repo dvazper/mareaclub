@@ -23,12 +23,29 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-fixed bg-gradient-to-b from-sky-day to-sky-day-accent text-text-day transition-colors duration-500;
+  color: #0f172a;
+  background-color: #e0f2fe;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(160deg, #eaf6fe 0%, #dcf0fd 32%, #bae6fd 68%, #93d5f8 100%);
+  background-attachment: fixed, fixed;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body.dark {
-  @apply bg-gradient-to-b from-bg-night to-bg-night-dark text-text-night;
+  color: #f8fafc;
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(148, 163, 184, 0.16) 0%, rgba(148, 163, 184, 0) 60%),
+    linear-gradient(160deg, #16233f 0%, #0f172a 45%, #0a1324 75%, #020617 100%);
+  background-attachment: fixed, fixed;
   color-scheme: dark;
+}
+
+/* Fine grain texture — keeps the gradient from reading flat/plasticky */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 /* Typography */
@@ -117,4 +134,19 @@ body.dark .btn-secondary {
   @apply transition-colors duration-500;
 }
 
+/* Marquee ticker */
+@layer components {
+  .marquee-track {
+    animation: marquee 28s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 

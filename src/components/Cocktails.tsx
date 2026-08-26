@@ -101,7 +101,7 @@ export const Cocktails: React.FC = () => {
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
             custom={i}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center rounded-2xl bg-white/40 p-6 backdrop-blur-md dark:bg-white/[0.04]"
           >
             <div className="mb-6 w-full">
               <img

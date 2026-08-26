@@ -87,10 +87,10 @@ export const Footer: React.FC = () => {
           © 2024 Marea Club. Todos los derechos reservados.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-text-night text-opacity-70 hover:text-opacity-100 transition-all text-sm">
+          <a href="https://www.instagram.com/mareaclubhuelva?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" className="text-text-night text-opacity-70 hover:text-opacity-100 transition-all text-sm">
             Instagram
           </a>
-          <a href="#" className="text-text-night text-opacity-70 hover:text-opacity-100 transition-all text-sm">
+          <a href="https://www.facebook.com/p/Marea-Club-Huelva-61573297225002/" className="text-text-night text-opacity-70 hover:text-opacity-100 transition-all text-sm">
             Facebook
           </a>
           <a href="#" className="text-text-night text-opacity-70 hover:text-opacity-100 transition-all text-sm">
