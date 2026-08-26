@@ -23,11 +23,11 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-[#f3efe8] text-[#173437] transition-colors duration-500;
+  @apply bg-fixed bg-gradient-to-b from-sky-day to-sky-day-accent text-text-day transition-colors duration-500;
 }
 
 body.dark {
-  @apply bg-[#0d2021] text-text-night;
+  @apply bg-gradient-to-b from-bg-night to-bg-night-dark text-text-night;
   color-scheme: dark;
 }
 
@@ -92,7 +92,7 @@ h3 {
 
 /* Primary Button */
 .btn-primary {
-  @apply rounded-full px-8 py-3 font-semibold transition-all duration-300 hover:shadow-lg active:scale-95;
+  @apply rounded-full bg-text-day px-8 py-3 font-semibold text-white transition-all duration-300 hover:shadow-lg active:scale-95;
 }
 
 body.dark .btn-primary {
@@ -105,11 +105,11 @@ body.dark .btn-primary {
 
 /* Secondary Button */
 .btn-secondary {
-  @apply rounded-full border border-text-day px-8 py-3 font-semibold text-text-day transition-all duration-300 hover:bg-text-day hover:text-white;
+  @apply rounded-full border border-text-day/25 px-8 py-3 font-semibold text-text-day transition-all duration-300 hover:-translate-y-1 hover:border-text-day hover:bg-text-day hover:text-white hover:shadow-lg;
 }
 
 body.dark .btn-secondary {
-  @apply border-text-night text-text-night hover:bg-text-night hover:text-bg-night;
+  @apply border-text-night/25 text-text-night hover:border-text-night hover:bg-text-night hover:text-bg-night;
 }
 
 /* Smooth transitions */

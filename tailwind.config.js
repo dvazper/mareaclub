@@ -14,6 +14,7 @@ export default {
         'bg-night': '#0f172a',
         'bg-night-dark': '#020617',
         'text-night': '#f8fafc',
+        'accent': '#e9bf86',
       },
     },
   },

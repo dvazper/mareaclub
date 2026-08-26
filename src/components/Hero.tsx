@@ -42,8 +42,8 @@ export const Hero: React.FC = () => {
         alt="Vistas de la costa al atardecer"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,22,29,.78)_0%,rgba(8,22,29,.34)_52%,rgba(8,22,29,.12)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(8,22,29,.72)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,23,42,.80)_0%,rgba(15,23,42,.36)_52%,rgba(15,23,42,.14)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(2,6,23,.75)_0%,transparent_55%)]" />
 
       <motion.div
         variants={containerVariants}

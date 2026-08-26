@@ -95,7 +95,7 @@ export const Reviews: React.FC = () => {
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
             custom={i}
-            className="p-6 bg-opacity-5 backdrop-blur-sm rounded-lg border border-text-day border-opacity-10 dark:border-text-night dark:border-opacity-10"
+            className="p-6 md:p-8 rounded-2xl bg-white/50 dark:bg-white/[0.04] backdrop-blur-md shadow-[0_1px_2px_rgba(15,23,42,0.06)] dark:shadow-none transition-colors duration-500"
           >
             {/* Stars */}
             <div className="flex gap-1 mb-4">

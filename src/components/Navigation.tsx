@@ -34,7 +34,7 @@ export const Navigation: React.FC = () => {
 
       {/* Menu */}
       <nav
-        className={`fixed left-0 top-0 z-40 flex h-screen w-72 flex-col items-center justify-center bg-[#12282a] shadow-2xl transition-transform duration-300 md:left-1/2 md:top-5 md:h-auto md:w-auto md:-translate-x-1/2 md:flex-row md:gap-8 md:rounded-full md:bg-black/25 md:px-7 md:py-3 md:shadow-none md:backdrop-blur-md ${
+        className={`fixed left-0 top-0 z-40 flex h-screen w-72 flex-col items-center justify-center bg-bg-night shadow-2xl transition-transform duration-300 md:left-1/2 md:top-5 md:h-auto md:w-auto md:-translate-x-1/2 md:flex-row md:gap-8 md:rounded-full md:bg-bg-night/30 md:px-7 md:py-3 md:shadow-none md:backdrop-blur-md ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
           <a
             key={item.label}
             href={item.href}
-            className="py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:text-[#e9bf86] md:py-0"
+            className="py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:text-accent md:py-0"
             onClick={() => setIsOpen(false)}
           >
             {item.label}
