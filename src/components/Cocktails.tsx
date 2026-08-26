@@ -178,7 +178,14 @@ export const Cocktails: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="flex justify-center mt-12"
       >
-        <button className="btn-secondary">Ver Carta Completa</button>
+        <button
+          className="btn-secondary"
+          onClick={() => {
+            window.location.hash = 'carta';
+          }}
+        >
+          Ver Carta Completa
+        </button>
       </motion.div>
     </section>
   );

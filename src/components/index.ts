@@ -7,3 +7,4 @@ export { Reviews } from './Reviews';
 export { Footer } from './Footer';
 export { ThemeToggle } from './ThemeToggle';
 export { SpecularButton } from './SpecularButton';
+export { Menu } from './Menu';

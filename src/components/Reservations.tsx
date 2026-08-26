@@ -56,7 +56,7 @@ export const Reservations: React.FC = () => {
         className="hidden lg:block absolute left-12 top-20 w-48 h-48"
       >
         <img
-          src={images.dayGallery[1]}
+          src={images.nightGallery[1]}
           alt="Vistas Increíbles"
           className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
         />
@@ -100,7 +100,7 @@ export const Reservations: React.FC = () => {
         className="hidden lg:block absolute right-12 bottom-20 w-48 h-48"
       >
         <img
-          src={images.nightGallery[1]}
+          src={images.dayGallery[1]}
           alt="Ambiente Único"
           className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
         />
