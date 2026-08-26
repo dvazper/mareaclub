@@ -48,66 +48,68 @@ export const Reservations: React.FC = () => {
 
   return (
     <section id="reservations" ref={ref} className="py-20 px-4 relative min-h-screen flex items-center">
-      {/* Floating Left Image */}
-      <motion.div
-        variants={floatingVariant1}
-        initial="hidden"
-        animate={isVisible ? 'visible' : 'hidden'}
-        className="hidden lg:block absolute left-12 top-20 w-48 h-48"
-      >
-        <img
-          src={images.nightGallery[1]}
-          alt="Vistas Increíbles"
-          className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
-        />
-        <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
-          Vistas Increíbles
-        </p>
-      </motion.div>
-
-      {/* Center Content */}
-      <motion.div
-        variants={centerVariant}
-        initial="hidden"
-        animate={isVisible ? 'visible' : 'hidden'}
-        className="max-w-2xl mx-auto text-center z-10 relative"
-      >
-        <h2 className="text-5xl md:text-6xl font-bold text-text-day dark:text-text-night mb-8">
-          ¿Te vienes?
-        </h2>
-
-        <div className="mb-8">
-          <p className="text-lg md:text-xl text-text-day-light dark:text-text-night mb-2">
-            📍 Ría de Huelva, España
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
+        {/* Left Image */}
+        <motion.div
+          variants={floatingVariant1}
+          initial="hidden"
+          animate={isVisible ? 'visible' : 'hidden'}
+          className="hidden w-48 shrink-0 lg:block"
+        >
+          <img
+            src={images.nightGallery[1]}
+            alt="Vistas Increíbles"
+            className="w-full h-48 object-cover rounded-lg shadow-2xl blur-reveal"
+          />
+          <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
+            Vistas Increíbles
           </p>
-          <p className="text-base md:text-lg text-text-day-light dark:text-text-night">
-            Disfruta de los mejores cócteles al atardecer en la mejor ubicación
+        </motion.div>
+
+        {/* Center Content */}
+        <motion.div
+          variants={centerVariant}
+          initial="hidden"
+          animate={isVisible ? 'visible' : 'hidden'}
+          className="max-w-2xl text-center z-10 relative"
+        >
+          <h2 className="text-5xl md:text-6xl font-bold text-text-day dark:text-text-night mb-8">
+            ¿Te vienes?
+          </h2>
+
+          <div className="mb-8">
+            <p className="text-lg md:text-xl text-text-day-light dark:text-text-night mb-2">
+              📍 Ría de Huelva, España
+            </p>
+            <p className="text-base md:text-lg text-text-day-light dark:text-text-night">
+              Disfruta de los mejores cócteles al atardecer en la mejor ubicación
+            </p>
+          </div>
+
+          <SpecularButton>Reserva Ahora</SpecularButton>
+
+          <p className="text-sm md:text-base text-text-day-light dark:text-text-night italic mt-8">
+            Abierto de martes a domingo • 18:00 - 02:00
           </p>
-        </div>
+        </motion.div>
 
-        <SpecularButton>Reserva Ahora</SpecularButton>
-
-        <p className="text-sm md:text-base text-text-day-light dark:text-text-night italic mt-8">
-          Abierto de martes a domingo • 18:00 - 02:00
-        </p>
-      </motion.div>
-
-      {/* Floating Right Image */}
-      <motion.div
-        variants={floatingVariant2}
-        initial="hidden"
-        animate={isVisible ? 'visible' : 'hidden'}
-        className="hidden lg:block absolute right-12 bottom-20 w-48 h-48"
-      >
-        <img
-          src={images.dayGallery[1]}
-          alt="Ambiente Único"
-          className="w-full h-full object-cover rounded-lg shadow-2xl blur-reveal"
-        />
-        <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
-          Ambiente Único
-        </p>
-      </motion.div>
+        {/* Right Image */}
+        <motion.div
+          variants={floatingVariant2}
+          initial="hidden"
+          animate={isVisible ? 'visible' : 'hidden'}
+          className="hidden w-48 shrink-0 lg:block"
+        >
+          <img
+            src={images.dayGallery[1]}
+            alt="Ambiente Único"
+            className="w-full h-48 object-cover rounded-lg shadow-2xl blur-reveal"
+          />
+          <p className="text-center mt-4 font-semibold text-text-day dark:text-text-night">
+            Ambiente Único
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };
